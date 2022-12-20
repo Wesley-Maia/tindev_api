@@ -5,6 +5,10 @@ module Api
                 render json: ProgrammingLanguage.all
             end
 
+            def show
+                render json: ProgrammingLanguage.find(params[:id])
+            end
+
             def create
                 programming_language = ProgrammingLanguage.new(programming_language_params)
                 
