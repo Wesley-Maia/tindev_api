@@ -6,11 +6,13 @@ module Api
             end
 
             def create
-                # binding.pry
                 programming_language = ProgrammingLanguage.new(programming_language_params)
                 
                 if programming_language.save
-                    render json: programming_language
+                    render json: programming_language, status: :created # 201
+                else
+                    # binding.pry
+                    render json: { errors: programming_language.errors.full_messages }, status: :bad_request # 400
                 end
             end
 
