@@ -1,24 +1,18 @@
-# README
+# Criando uma API REST usando Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este repositório contém todos arquivos de uma API REST desenvolvida por _[Wesley Oliveira Maia](https://www.linkedin.com/in/wesley-maia-433b7b60/)_ com base no projeto do Desenvolvedor Lucas Caton ([LIVE #012](https://www.youtube.com/watch?v=jcA_Nn2xPXg)). Essa API é utilizada para cadastrar linguagens de programação, possuindo uma única tabela (programming_languages) com os seguintes atributos: *name*, *creator* e *release_year*.
 
-Things you may want to cover:
+## Ferramentas Utilizadas
 
-* Ruby version
+ 1. Framework: Ruby on Rails
+ 2. Banco de Dados: SQLite
+ 
 
-* System dependencies
 
-* Configuration
+## Lista de requisitos
 
-* Database creation
+### 1 - Criar um endpoint para listar todas as linguagens de programação cadastradas
+- O endpoint deve ser acessível através do caminho (`/programming_languages`);
+- Através do caminho `/products`, todos os produtos devem ser retornados.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Lista de produtos](./public/listalinguagens.png)
