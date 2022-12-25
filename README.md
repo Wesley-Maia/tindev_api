@@ -11,8 +11,36 @@ Este repositório contém todos arquivos de uma API REST desenvolvida por _[Wesl
 
 ## Lista de requisitos
 
-### 1 - Criar um endpoint para listar todas as linguagens de programação cadastradas
+### 1 - Criar um endpoint para o cadastro de linguagens de programação
 - O endpoint deve ser acessível através do caminho (`/programming_languages`);
-- Através do caminho `/products`, todos os produtos devem ser retornados.
+- Os produtos enviados devem ser salvos em uma **collection** do MongoDB;
+- O endpoint deve receber a seguinte estrutura:
 
-![Lista de produtos](./public/listalinguagens.png)
+```json
+{
+  "name": "language_name",
+  "creator": "language_creator",
+  "release_year": language_release_year
+}
+```
+
+O retorno da API de um produto cadastrado com sucesso deverá ser:
+
+```json
+{
+	"id": 5,
+	"name": "language_name",
+	"release_year": 2022,
+	"creator": "language_creator",
+	"created_at": "2022-12-25T20:33:56.537Z",
+	"updated_at": "2022-12-25T20:33:56.537Z"
+}
+```
+
+![Create Register](./public/createregister.png)
+
+### 2 - Criar um endpoint para listar todas as linguagens de programação cadastradas
+- O endpoint deve ser acessível através do caminho (`/programming_languages/:id``);
+- Através do caminho `/programming_languages`, todos os produtos devem ser retornados.
+
+![Lista de produtos](./public/listallregister.png)
