@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cadastrando linguagens de programação..."
+
+ProgrammingLanguage.create!(
+  name: "C",
+  creator: "Dennis Ritchie",
+  release_year: 1972,
+)
+
+ProgrammingLanguage.create!(
+  name: "Python",
+  creator: "Guido van Rossum",
+  release_year: 1991,
+)
+
+ProgrammingLanguage.create!(
+  name: "Ruby",
+  creator: "Yukihiro Matsumoto",
+  release_year: 1995,
+)
+
+puts "Linguagens cadastradas!"
